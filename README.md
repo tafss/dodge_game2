@@ -1,14 +1,18 @@
-# 🚀 CyberDodge Online
+# CyberDodge Online - Global Arena
 
-Un juego de esquivar obstáculos en 2D desarrollado con HTML5 Canvas, JavaScript Vanilla y Firebase Firestore para el modo multijugador y tabla de récords en tiempo real.
+Un juego arcade multijugador en tiempo real con estética Cyberpunk en el que debes esquivar obstáculos y competir por la puntuación más alta.
 
-## 🎮 Características
-- **Controles estricto WASD:** Mueve tu nave en 4 direcciones.
-- **Multijugador en vivo:** Visualiza la posición de otros jugadores activos en pantalla.
-- **Aceleración Progresiva:** La velocidad y frecuencia de caída de obstáculos aumenta continuamente.
-- **Tabla de Records:** Registro global guardado automáticamente en tiempo real.
+## 🚀 Características
 
-## 🛠️ Instalación y Uso Local
-1. Descomprime la carpeta del proyecto.
-2. Edita `js/config.js` e introduce tus claves de proyecto de **Firebase**.
-3. Abre `index.html` directamente en tu navegador.
+- **Diseño Cyberpunk Futurista**: Efectos Neón con Tailwind CSS, FontAwesome y Google Fonts.
+- **Multijugador en Tiempo Real**: Sincronización de presencia de jugadores activos mediante Firebase Firestore.
+- **Efectos de Sonido Sintetizados**: Audio generado dinámicamente con Web Audio API.
+- **Tabla de Clasificación Global**: Récords guardados en la nube.
+
+## 📁 Archivos del Proyecto
+
+- `index.html`: Estructura HTML y vista de la interfaz.
+- `style.css`: Estilos personalizados, efectos neón y animaciones.
+- `script.js`: Lógica del juego, motor gráfico 2D Canvas y conexión a Firebase.
+- `.gitignore`: Archivos ignorados por Git.
+- `README.md`: Documentación del proyecto.
