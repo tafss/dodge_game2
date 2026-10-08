@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CYBER-DODGE ONLINE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOGIN SCREEN -->
+  <div id="loginScreen" class="screen active">
+    <div class="login-card">
+      <h1 class="title">CYBER-DODGE</h1>
+      <p class="subtitle">Ingresa tu Nickname para entrar a las tablas globales</p>
+      <input type="text" id="usernameInput" placeholder="Tu Nombre de Piloto" maxlength="12" autofocus>
+      <button class="btn" onclick="startGame()">ENTRAR AL JUEGO</button>
+    </div>
+  </div>
+
+  <!-- GAME SCREEN -->
+  <div id="gameScreen" class="screen">
+    <div class="game-container">
+      <canvas id="gameCanvas" width="600" height="500"></canvas>
+      
+      <div class="sidebar">
+        <div>
+          <div class="panel-title">RÉCORDS GLOBALES</div>
+          <ul id="leaderboard" class="leaderboard-list">
+            <!-- Récords dinámicos -->
+          </ul>
+        </div>
+
+        <div style="margin-top: auto;">
+          <div class="panel-title">CONTROLES</div>
+          <div class="controls-info">
+            <p>Moverse: <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd></p>
+            <p style="margin-top: 5px;">Reiniciar: <kbd>R</kbd></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
