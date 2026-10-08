@@ -1,23 +1,14 @@
-# 🎮 Cyber-Dodge Online
+# 🚀 CyberDodge Online
 
-Un juego arcade rápido en 2D desarrollado con HTML5 Canvas, CSS3 y JavaScript vanilla con estética cyberpunk/neón.
+Un juego de esquivar obstáculos en 2D desarrollado con HTML5 Canvas, JavaScript Vanilla y Firebase Firestore para el modo multijugador y tabla de récords en tiempo real.
 
-## 🚀 Características
-- **Login Rápido:** Ingresa tu nickname para competir.
-- **Controles Fluidos:** Control con teclas `WASD` y reinicio rápido con `R`.
-- **Dificultad Progresiva:** Velocidad de obstáculos y frecuencia de caída en aumento constante.
-- **Tabla de Récords:** Registro persistente de mejores puntuaciones.
-- **Listo para Desplegar:** Optimizado para publicar directamente en Vercel, Netlify o GitHub Pages.
+## 🎮 Características
+- **Controles estricto WASD:** Mueve tu nave en 4 direcciones.
+- **Multijugador en vivo:** Visualiza la posición de otros jugadores activos en pantalla.
+- **Aceleración Progresiva:** La velocidad y frecuencia de caída de obstáculos aumenta continuamente.
+- **Tabla de Records:** Registro global guardado automáticamente en tiempo real.
 
-## 🛠️ Estructura del Proyecto
-```text
-juego-esquivar/
-├── index.html   # Estructura del juego e interfaz
-├── style.css    # Estilos neón y diseño
-├── script.js    # Lógica del juego y física en Canvas
-└── README.md    # Documentación del proyecto
-```
-
-## 📦 Despliegue en Vercel / GitHub Pages
-1. Sube esta carpeta a un nuevo repositorio en GitHub.
-2. Importa el repositorio en **Vercel** o activa **GitHub Pages** en la configuración del repositorio.
+## 🛠️ Instalación y Uso Local
+1. Descomprime la carpeta del proyecto.
+2. Edita `js/config.js` e introduce tus claves de proyecto de **Firebase**.
+3. Abre `index.html` directamente en tu navegador.

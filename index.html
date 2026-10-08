@@ -3,45 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CYBER-DODGE ONLINE</title>
-  <link rel="stylesheet" href="style.css">
+  <title>CyberDodge Online - Arena Multijugador</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Firebase App & Firestore SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 </head>
 <body>
 
-  <!-- LOGIN SCREEN -->
-  <div id="loginScreen" class="screen active">
-    <div class="login-card">
-      <h1 class="title">CYBER-DODGE</h1>
-      <p class="subtitle">Ingresa tu Nickname para entrar a las tablas globales</p>
-      <input type="text" id="usernameInput" placeholder="Tu Nombre de Piloto" maxlength="12" autofocus>
-      <button class="btn" onclick="startGame()">ENTRAR AL JUEGO</button>
+  <!-- PANTALLA DE LOGIN -->
+  <div id="loginScreen" class="overlay">
+    <div class="card">
+      <h1 class="title">CYBERDODGE</h1>
+      <p class="subtitle">Arena Global Multijugador</p>
+      
+      <div class="form-group">
+        <label for="usernameInput">Tu Nickname de Piloto</label>
+        <input type="text" id="usernameInput" maxlength="12" placeholder="Ej: CyberAce" autofocus>
+      </div>
+
+      <button id="btnPlay" class="btn-primary">ENTRAR A LA ARENA</button>
     </div>
   </div>
 
-  <!-- GAME SCREEN -->
-  <div id="gameScreen" class="screen">
-    <div class="game-container">
-      <canvas id="gameCanvas" width="600" height="500"></canvas>
-      
-      <div class="sidebar">
-        <div>
-          <div class="panel-title">RÉCORDS GLOBALES</div>
-          <ul id="leaderboard" class="leaderboard-list">
-            <!-- Récords dinámicos -->
-          </ul>
-        </div>
-
-        <div style="margin-top: auto;">
-          <div class="panel-title">CONTROLES</div>
-          <div class="controls-info">
-            <p>Moverse: <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd></p>
-            <p style="margin-top: 5px;">Reiniciar: <kbd>R</kbd></p>
-          </div>
-        </div>
+  <!-- PANTALLA DEL JUEGO -->
+  <div id="gameScreen" class="hidden">
+    <div class="header">
+      <div class="player-info">
+        Piloto: <span id="displayName">--</span>
+      </div>
+      <div class="stats">
+        <span>Puntos: <strong id="scoreVal">0</strong></span>
+        <span>Velocidad: <strong id="speedVal">x1.0</strong></span>
       </div>
     </div>
+
+    <div class="main-layout">
+      <div class="canvas-container">
+        <canvas id="gameCanvas" width="600" height="400"></canvas>
+      </div>
+
+      <div class="sidebar">
+        <h3>RECORDS HISTÓRICOS</h3>
+        <ol id="leaderboardList">
+          <li>Cargando top 10...</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="controls-hint">
+      Móvete con <b>WASD</b> | Presiona <b>R</b> para reiniciar si caes
+    </div>
   </div>
 
-  <script src="script.js"></script>
+  <!-- Configuración e inicio del juego -->
+  <script src="js/config.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/game.js"></script>
 </body>
 </html>
